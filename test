@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+if [ $ARCH = ARM ] && [ $MACH = RPI2 ]; then
+  qemu-system-arm -nographic -nodefaults -m 256 -M raspi2 -serial stdio -kernel kernel.elf
+fi
