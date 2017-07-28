@@ -1,0 +1,10 @@
+[dependencies]
+collections = {}
+
+[target.rpi2.dependencies.compiler_builtins]
+features = ["c"]
+git = "https://github.com/rust-lang-nursery/compiler-builtins"
+stage = 1
+rustflags = [
+  "-C", "target-cpu=armv7",
+]

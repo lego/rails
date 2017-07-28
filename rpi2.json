@@ -1,0 +1,35 @@
+{
+    "llvm-target": "arm-none-eabihf",
+    "linker-flavor": "gcc",
+    "linker-is-gnu": true,
+    "dynamic-linking": true,
+    "env": "gnu",
+    "target-endian": "little",
+    "target-pointer-width": "32",
+    "os": "none",
+    "env": "eabi",
+    "vendor": "unknown",
+    "arch": "arm",
+    "linker": "arm-none-eabi-gcc",
+    "ar": "arm-none-eabi-ar",
+    "data-layout": "e-m:e-p:32:32-i64:64-v128:64:128-a:0:32-n32-S64",
+    "executables": true,
+    "relocation-model": "static",
+    "no-compiler-rt": true,
+    "pre-linker-args": {
+      "gcc": [
+        "-nostdlib",
+        "-ffreestanding",
+        "-mfloat-abi=hard",
+        "-mcpu=cortex-a7",
+        "-mfpu=neon-vfpv4"
+      ]
+    },
+    "post-link-args": {
+      "gcc": [
+        "-mfloat-abi=hard",
+        "-mcpu=cortex-a7",
+        "-mfpu=neon-vfpv4"
+      ]
+    }
+}

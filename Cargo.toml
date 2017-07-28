@@ -1,0 +1,9 @@
+[package]
+name = "rails"
+version = "0.1.0"
+authors = ["Joey Pereira <joey@pereira.io>"]
+
+[dependencies]
+
+[profile.dev]
+panic = "abort"

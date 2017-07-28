@@ -1,6 +1,11 @@
 #!/bin/bash
 
+if [ -z $ARCH ] || [ -z $MACH ]; then
+  echo "Usage: "
+  echo "   ARCH=ARM MACH=RPI2 $0"
+  exit 1
+fi
 
-if [ $ARCH = ARM ] && [ $MACH = RPI2 ]; then
+if [ ${ARCH} = ARM ] && [ ${MACH} = RPI2 ]; then
   qemu-system-arm -nographic -nodefaults -m 256 -M raspi2 -serial stdio -kernel kernel.elf
 fi
