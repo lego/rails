@@ -7,3 +7,6 @@ authors = ["Joey Pereira <joey@pereira.io>"]
 
 [profile.dev]
 panic = "abort"
+
+[target.rpi2.features]
+default = ["plat_rpi2", "arch_aarmv7"]

@@ -1,5 +1,4 @@
 #![no_std]
-
 #![feature(lang_items)]
 
 // #![feature(macro_rules, globs, managed_boxes, linkage)]
@@ -45,4 +44,6 @@
 
 // Pull in utils library.
 pub mod util;
+pub mod mach;
+pub mod arch;
 pub mod kernel;

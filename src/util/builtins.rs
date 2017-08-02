@@ -12,7 +12,7 @@ pub extern "C" fn rust_eh_unwind_resume() {}
 // of a program panic.
 #[no_mangle]
 pub fn __aeabi_unwind_cpp_pr0() {
-    loop {}
+  loop {}
 }
 
 #[allow(non_snake_case)]
